@@ -1,0 +1,23 @@
+## 파이썬으로 mysite 프로젝트 생성
+python myvenv\Scripts\django-admin.py startproject mysite .
+## 데이터 베이스 설정 (sqlite3)
+python manage.py migrate
+## 서버 돌리기
+python manage.py runserver
+## 주소 : http://127.0.0.1:8000/
+
+
+## 어플리케이션 만들기
+python manage.py startapp blog
+## 데이터베이스에 새 모델 추가
+python manage.py makemigrations blog
+## 실제 데이터 베이스에 모델 추가 반영
+python manage.py migrate blog
+
+## 관리자 로그인 주소 : http://127.0.0.1:8000/admin/
+
+## 관리자(superuse) 생성
+python manage.py createsuperuser
+name : jeong
+email : admin@admin.com
+pw : admin
